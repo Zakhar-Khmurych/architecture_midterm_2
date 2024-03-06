@@ -4,11 +4,11 @@
     <PropertyGroup>
         <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
         <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-        <ProjectGuid>{2A6833CC-1657-4DA9-9B85-C8ABB5BDA418}</ProjectGuid>
+        <ProjectGuid>{9C6E8E8F-5D08-4F77-B20D-1477ABD990DD}</ProjectGuid>
         <OutputType>Exe</OutputType>
         <AppDesignerFolder>Properties</AppDesignerFolder>
-        <RootNamespace>Creatures</RootNamespace>
-        <AssemblyName>Spells_Creatures_and_where_to_find_them</AssemblyName>
+        <RootNamespace>PlayerActions</RootNamespace>
+        <AssemblyName>PlayerActions</AssemblyName>
         <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
         <FileAlignment>512</FileAlignment>
         <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -39,18 +39,18 @@
         <Reference Include="System.Xml" />
     </ItemGroup>
     <ItemGroup>
-        <Compile Include="Heal.cs" />
+        <Compile Include="IPlayerAction.cs" />
+        <Compile Include="PlayerAction.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
-        <Compile Include="Creature.cs" />
-        <Compile Include="Scorpion.cs" />
-        <Compile Include="Spell.cs" />
-        <Compile Include="Troll.cs" />
-        <Compile Include="Wizard.cs" />
     </ItemGroup>
     <ItemGroup>
       <ProjectReference Include="..\Model\Model.csproj">
         <Project>{39ad11e8-e579-40c6-88ee-271356741c01}</Project>
         <Name>Model</Name>
+      </ProjectReference>
+      <ProjectReference Include="..\Spells_Creatures_and_where_to_find_them\Spells_Creatures_and_where_to_find_them.csproj">
+        <Project>{2a6833cc-1657-4da9-9b85-c8abb5bda418}</Project>
+        <Name>Spells_Creatures_and_where_to_find_them</Name>
       </ProjectReference>
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
